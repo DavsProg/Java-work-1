@@ -1,0 +1,50 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Carro carro1 = new Carro();
+        System.out.println(carro1.velocidadactual);
+        carro1.acelerar();
+        System.out.println(carro1.velocidadactual);
+        carro1.desacelerar();
+        System.out.println(carro1.velocidadactual);
+        Carro carro2 =new Carro(4,200,50);
+        System.out.println(carro2.velocidadactual);
+        carro2.acelerar();
+        System.out.println(carro2.velocidadactual);
+        carro2.desacelerar();
+        System.out.println(carro2.velocidadactual);
+
+    }
+}
+
+class Carro {
+    int puertas ;
+    int velocidadmax ;
+    float velocidadactual ;
+
+    public Carro(){
+        puertas = 2;
+        velocidadmax = 160;
+        velocidadactual = 20;
+        
+        System.out.println("estoy en el constructor 1");
+    }
+
+    public Carro(int i, int i1, float i2) {
+        puertas=i;
+        velocidadmax=i1;
+        velocidadactual=i2;
+
+        System.out.println("estoy en el constructor 2");
+    }
+
+
+    public void acelerar(){
+        velocidadactual += 15;
+    };
+    public void desacelerar(){
+        velocidadactual -= 15;
+    };
+
+
+}
